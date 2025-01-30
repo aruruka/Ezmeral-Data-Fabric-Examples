@@ -21,23 +21,23 @@ This project demonstrates interaction with HPE Ezmeral Data Fabric's S3-compatib
 
 1. Clone this repository:
 
-    ```bash
-    git clone [repository-url]
-    cd [repository-name]
-    ```
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
 
-2. Install dependencies:
+1. Install dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
-3. Set up environment variables:
+1. Set up environment variables:
 
-    ```bash
-    export AWS_ACCESS_KEY_ID="your-access-key"
-    export AWS_SECRET_ACCESS_KEY="your-secret-key"
-    ```
+```bash
+export AWS_ACCESS_KEY_ID="your-access-key"
+export AWS_SECRET_ACCESS_KEY="your-secret-key"
+```
 
 ## Configuration
 
