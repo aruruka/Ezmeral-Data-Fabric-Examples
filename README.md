@@ -63,33 +63,6 @@ client = ObjectStoreClient(
 
 The `examples/basic_operations.py` script demonstrates common operations:
 
-```python
-from s3_operations import ObjectStoreClient, BucketManager, ObjectManager
-
-# Initialize client
-client = ObjectStoreClient()
-
-# Create managers
-bucket_manager = BucketManager(client)
-object_manager = ObjectManager(client)
-
-# List buckets
-buckets = bucket_manager.list_buckets()
-
-# Create bucket
-bucket_manager.create_bucket("my-bucket")
-
-# Upload file
-object_manager.upload_file("my-bucket", "local-file.txt", "remote-file.txt")
-
-# List objects with pagination
-for obj in object_manager.list_objects("my-bucket"):
-    print(f"Object: {obj['Key']}, Size: {obj['Size']} bytes")
-
-# Download file
-object_manager.download_file("my-bucket", "remote-file.txt", "downloaded-file.txt")
-```
-
 Run the example script:
 
 ```bash
@@ -111,4 +84,4 @@ Please feel free to submit issues and pull requests for improvements.
 
 ## License
 
-[Your chosen license]
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
