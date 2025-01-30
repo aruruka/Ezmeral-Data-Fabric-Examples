@@ -105,7 +105,7 @@ class ObjectManager:
 
     def list_objects_paginated(
         self, bucket: str, prefix: str = ""
-    ) -> Iterator[List[str]]:
+    ) -> Iterator[List[dict]]:
         """List objects in an S3 bucket with pagination support.
 
         Args:
@@ -114,7 +114,7 @@ class ObjectManager:
                 Defaults to empty string (list all objects).
 
         Returns:
-            Iterator[List[str]]: Iterator yielding lists of object keys per page.
+            Iterator[List[dict]]: Iterator yielding lists of object keys per page.
         """
         paginator = self.client.get_paginator("list_objects_v2")
         page_iterator = paginator.paginate(
